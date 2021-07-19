@@ -1,0 +1,9 @@
+# Enviroment vars
+.env
+# NodeJS FILES
+**/node_modules/**
+**/package-lock.json
+#backup files & editors files
+**/.vscode/**
+*~
+
