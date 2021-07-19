@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "c619290d-e060-4e9c-bc74-02b582028489",
+		"name": "xyz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/products/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - CREATE product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "{{OBJ_NAME}}",
+							"description": "Unic name of product like Gear 60",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "{{OBJ_DES}}",
+							"description": "Description of product",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "{{OBJ_STOCK}}",
+							"description": "Stock quatity",
+							"type": "text"
+						},
+						{
+							"key": "min_time",
+							"value": "{{OBJ_MIN_TIME}}",
+							"description": "Minimal shipping time in [ days ] MIN 1 and less than max",
+							"type": "text"
+						},
+						{
+							"key": "max_time",
+							"value": "{{OBJ_MAX_TIME}}",
+							"description": "Max shipping time in [ days ] MIN 2 and biggert than min",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/v1/products/product",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH - product/id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "{{OBJ_NAME}}",
+							"description": "Unic name of product like Gear 60",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "{{OBJ_DES}}",
+							"description": "Description of product",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "{{OBJ_STOCK}}",
+							"description": "Stock quatity",
+							"type": "text"
+						},
+						{
+							"key": "min_time",
+							"value": "{{OBJ_MIN_TIME}}",
+							"description": "Minimal shipping time in [ days ] MIN 1 and less than max",
+							"type": "text"
+						},
+						{
+							"key": "max_time",
+							"value": "{{OBJ_MAX_TIME}}",
+							"description": "Max shipping time in [ days ] MIN 2 and biggert than min",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/v1/products/product/{{OBJ_ID}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"product",
+						"{{OBJ_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - product/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/products/product/{{OBJ_ID}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"product",
+						"{{OBJ_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - sell product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "{{USR}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{USR_EMAIL}}",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "{{QUANTITY}}",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "{{CITY}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/v1/products/sell/{{OBJ_ID}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"sell",
+						"{{OBJ_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Top Buyers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/products/topBuyers",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"topBuyers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "score",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "{{USR}}",
+							"type": "text"
+						},
+						{
+							"key": "purchaseId",
+							"value": "{{PURCHASE_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "{{OBJ_ID}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/v1/products/review",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - review by product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/products/revStats",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"revStats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - reviews by client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/products/revClients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"products",
+						"revClients"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://xyzbackennd.herokuapp.com"
+		},
+		{
+			"key": "OBJ_ID",
+			"value": "000"
+		},
+		{
+			"key": "OBJ_NAME",
+			"value": "product_name"
+		},
+		{
+			"key": "OBJ_DES",
+			"value": "product_description"
+		},
+		{
+			"key": "OBJ_STOCK",
+			"value": "1"
+		},
+		{
+			"key": "OBJ_MIN_TIME",
+			"value": "1"
+		},
+		{
+			"key": "OBJ_MAX_TIME",
+			"value": "2"
+		},
+		{
+			"key": "PURCHASE_ID",
+			"value": "0000"
+		},
+		{
+			"key": "USR",
+			"value": "user"
+		},
+		{
+			"key": "USR_EMAIL",
+			"value": "user@usr.com"
+		},
+		{
+			"key": "QUANTITY",
+			"value": "1"
+		},
+		{
+			"key": "CITY",
+			"value": "bogota"
+		}
+	]
+}
