@@ -6,3 +6,4 @@ const conf = require('../config/default');
 const url = conf.dburl;
 module.exports.client = new MongoClient(url);
 
+console.log(url);
